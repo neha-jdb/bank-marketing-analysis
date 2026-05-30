@@ -36,29 +36,14 @@ This project answers: **"Can we predict, before placing a call, which clients ar
 
 ---
 
-## 📁 Repository Structure
+## 📁 Repository Contents
 
-```
-bank-marketing-analysis/
-│
-├── README.md                          ← you are here
-├── data/
-│   └── data.csv                       ← UCI Bank Marketing dataset
-├── notebooks/
-│   ├── 01_EDA.ipynb                   ← exploratory data analysis
-│   └── 02_Modeling.ipynb              ← predictive modeling pipeline
-└── images/                            ← visualizations
-    ├── target_distribution.png
-    ├── age_analysis.png
-    ├── job_analysis.png
-    ├── duration_analysis.png
-    ├── contact_method_analysis.png
-    ├── campaign_frequency_analysis.png
-    ├── financial_obligations_analysis.png
-    ├── correlation_heatmap.png
-    ├── model_evaluation.png
-    └── feature_importance.png
-```
+| File | Description |
+|---|---|
+| [`01_EDA.ipynb`](./01_EDA.ipynb) | Exploratory data analysis — data quality, statistical patterns, feature relationships |
+| [`02_Modeling.ipynb`](./02_Modeling.ipynb) | Predictive modeling pipeline — feature engineering, encoding, training, evaluation |
+| [`data.csv`](./data.csv) | UCI Bank Marketing dataset |
+| [`images/`](./images) | Saved visualizations referenced in the README |
 
 ---
 
@@ -73,7 +58,7 @@ A structured investigation of dataset integrity, statistical patterns, and featu
 - Flagged severe **multicollinearity** (|r| > 0.97 between `euribor3m` and `emp.var.rate`).
 - Identified **data leakage** in the `duration` feature — only knowable post-call.
 
-→ [Open the EDA notebook](./notebooks/01_EDA.ipynb)
+→ [Open the EDA notebook](./01_EDA.ipynb)
 
 ---
 
@@ -107,17 +92,20 @@ A full machine learning pipeline: feature engineering, encoding, scaling, traini
 - **66.2% of actual subscribers identified** — the naive model catches zero.
 - Per 8,000 calls, the model yields ~600 additional subscribers vs. random selection — **same operational cost, 3× the return**.
 
-→ [Open the Modeling notebook](./notebooks/02_Modeling.ipynb)
+→ [Open the Modeling notebook](./02_Modeling.ipynb)
 
 ---
 
 ## 📈 Key Visualizations
 
-### Target Distribution — Severe Class Imbalance
-![Target Distribution](./images/target_distribution.png)
-
 ### Age vs. Subscription Rate — A Strong U-Shape Pattern
 ![Age Analysis](./images/age_analysis.png)
+
+### Contact Method Effectiveness — Cellular Converts ~3× Better
+![Contact Method Analysis](./images/contact_method_analysis.png)
+
+### Campaign Frequency — Diminishing Returns After 5 Contacts
+![Campaign Frequency Analysis](./images/campaign_frequency_analysis.png)
 
 ### Model Evaluation — Confusion Matrix & ROC Curve
 ![Model Evaluation](./images/model_evaluation.png)
@@ -153,8 +141,8 @@ A full machine learning pipeline: feature engineering, encoding, scaling, traini
 
 **Option 1 — Run in Google Colab (no installation needed):**
 
-- [Open 01_EDA.ipynb in Colab](https://colab.research.google.com/github/neha-jdb/bank-marketing-analysis/blob/main/notebooks/01_EDA.ipynb)
-- [Open 02_Modeling.ipynb in Colab](https://colab.research.google.com/github/neha-jdb/bank-marketing-analysis/blob/main/notebooks/02_Modeling.ipynb)
+- [Open 01_EDA.ipynb in Colab](https://colab.research.google.com/github/neha-jdb/bank-marketing-analysis/blob/main/01_EDA.ipynb)
+- [Open 02_Modeling.ipynb in Colab](https://colab.research.google.com/github/neha-jdb/bank-marketing-analysis/blob/main/02_Modeling.ipynb)
 
 **Option 2 — Run locally:**
 
